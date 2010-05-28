@@ -14,6 +14,7 @@
 class Smstrade
 
   require "net/http"
+  require "cgi"
 
   # API-Key
   cattr_accessor :key
@@ -64,7 +65,7 @@ class Smstrade
     rescue
       response = 0
     end
-    return response.to_i == 100, response(response.to_i)
+    return (response.to_i == 100), response(response.to_i)
   end
 
   private
@@ -72,7 +73,6 @@ class Smstrade
   def prepare_string(options)
     message = encode_message(options[:text])
     str = "/?key=#{key}&to=#{options[:number]}&message=#{message}&route=#{route}&from=#{from}&charset=#{charset}&debug=#{debug}"
-    warn str
     return str
   end
 
