@@ -9,18 +9,24 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Maikel Urlitzki"]
-  s.date = %q{2010-05-28}
+  s.date = %q{2010-05-31}
   s.email = %q{maikel@urlitzki.de}
   s.extra_rdoc_files = [
     "README.rdoc"
   ]
   s.files = [
-    "lib/smstrade.rb"
+    ".gitignore",
+     "README.rdoc",
+     "Rakefile",
+     "VERSION",
+     "lib/smstrade.rb",
+     "smstrade_de.gemspec",
+     "test.rb"
   ]
   s.homepage = %q{http://github.com/maikelcoke/smstrade_de}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.6}
+  s.rubygems_version = %q{1.3.5}
   s.summary = %q{Gem for sending SMS via smstrade.de Gateway.}
 
   if s.respond_to? :specification_version then
@@ -33,3 +39,4 @@ Gem::Specification.new do |s|
   else
   end
 end
+
