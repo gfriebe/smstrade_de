@@ -1,6 +1,25 @@
 For use with http://www.smstrade.de
 
+= Installation
+
+  gem install smstrade_de
+
 = Configuration
+
   # config/intializers/smstrade.rb
   Smstrade.key = "YOUR_KEY"
   Smstrade.route = "ROUTE"
+
+= Usage
+
+  # Controller
+  Smstrade.new do |sms|
+   @result, @response = sms.send(:number => "+491601234567", :text => "This is a dummy text.")
+  end
+
+= Author
+
+  Maikel Urlitzki
+  http://github.com/maikelcoke
+
+
